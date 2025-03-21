@@ -1,47 +1,85 @@
+/* Love Meter Container */
 #love-meter {
     text-align: center;
-    padding: 20px;
-    background: rgba(255, 192, 203, 0.2);
-    border-radius: 10px;
+    padding: 30px;
+    background: linear-gradient(135deg, #ff99cc, #ff66b2);
+    border-radius: 15px;
     max-width: 600px;
     margin: auto;
+    box-shadow: 0px 4px 15px rgba(255, 105, 180, 0.3);
+    transition: all 0.3s ease-in-out;
 }
 
-p {
-    font-size: 1.2rem;
+/* Romantic Font */
+#love-meter p, #love-result {
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(255, 20, 147, 0.5);
 }
 
+/* Love Meter Button */
 button {
     margin-top: 20px;
-    background: #ff66b2;
+    background: #ff3385;
     border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
+    padding: 12px 20px;
+    font-size: 1.2rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 50px;
     color: white;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(255, 20, 147, 0.4);
 }
 
 button:hover {
-    background: #ff3385;
+    background: #ff007f;
+    box-shadow: 0px 0px 15px rgba(255, 20, 147, 0.6);
+    transform: scale(1.05);
 }
 
-#quiz-result {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    color: #ff3385;
-}
-#love-meter {
-    background: rgba(255, 192, 203, 0.2);
-    padding: 50px;
-    border-radius: 10px;
-    text-align: center;
-}
-
+/* Love Meter Result */
 #love-result {
     display: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: #ff007f;
     margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+#love-result.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glowing Love Meter Bar */
+#love-meter-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#love-meter-fill {
+    width: 0%;
+    height: 100%;
+    background: #ff007f;
+    transition: width 2s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(255, 20, 147, 0.6);
+}
+
+/* Heartbeat Animation */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.heartbeat {
+    animation: heartbeat 1s infinite;
 }
