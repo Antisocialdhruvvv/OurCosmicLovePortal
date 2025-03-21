@@ -43,3 +43,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     randomizeAvatar();
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const avatarCanvas = document.getElementById("avatarCanvas");
+    if (!avatarCanvas) return;
+
+    const ctx = avatarCanvas.getContext("2d");
+    const avatarImage = new Image();
+    avatarImage.src = "/assets/images/avatars/default_avatar.png";
+
+    avatarImage.onload = () => {
+        ctx.drawImage(avatarImage, 0, 0, avatarCanvas.width, avatarCanvas.height);
+    };
+
+    document.getElementById("avatarSelector").addEventListener("change", (event) => {
+        const selectedAvatar = event.target.value;
+        avatarImage.src = `/assets/images/avatars/${selectedAvatar}.png`;
+    });
+});
+
