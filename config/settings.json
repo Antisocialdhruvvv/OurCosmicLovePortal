@@ -1,6 +1,6 @@
 {
     "siteName": "Our Cosmic Love Portal",
-    "theme": "light",  
+    "theme": "light",
     "enableDarkMode": true,
     "language": "en",
     "dateFormat": "DD-MM-YYYY",
@@ -9,51 +9,41 @@
     "musicEnabled": true,
     "backgroundMusic": "assets/sounds/chime.mp3",
     "enableAnimations": true,
-    "maxLoveLetters": 50,
+    "soundEffects": true,
+    
     "nicknameGenerator": {
         "enabled": true,
-        "nicknameCount": 100
+        "maxSuggestions": 5,
+        "nicknameCount": 100,
+        "allowCustomNames": true
     },
+
     "watchParty": {
         "enabled": true,
+        "allowVideoUpload": false,
         "maxParticipants": 5
     },
+
     "loveMeterQuiz": {
         "enabled": true,
-        "questionsCount": 10
+        "questionsCount": 10,
+        "resultVariations": ["soulmates", "best friends", "passionate", "needs work"]
     },
+
+    "journal": {
+        "enabled": true,
+        "maxEntriesPerDay": 5,
+        "shareOption": true
+    },
+
     "todoList": {
         "enabled": true,
         "maxTasks": 20
     },
+
     "shootingStarWishes": {
         "enabled": true,
-        "maxWishes": 30
+        "maxWishes": 30,
+        "wishRevealTime": "midnight"
     }
 }
-{
-  "theme": "dark",
-  "animations": true,
-  "soundEffects": true,
-  "nicknameGenerator": {
-    "maxSuggestions": 5,
-    "allowCustomNames": true
-  },
-  "watchParty": {
-    "allowVideoUpload": false,
-    "maxUsers": 5
-  },
-  "loveMeter": {
-    "questionCount": 10,
-    "resultVariations": ["soulmates", "best friends", "passionate", "needs work"]
-  },
-  "journal": {
-    "maxEntriesPerDay": 5,
-    "shareOption": true
-  },
-  "shootingStar": {
-    "maxWishes": 3,
-    "wishRevealTime": "midnight"
-  }
-}
-
