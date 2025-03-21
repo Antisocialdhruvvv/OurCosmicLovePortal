@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relationship Tree | Our Cosmic Love Portal</title>
     <link rel="stylesheet" href="../css/relationship_tree.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.3.0/mermaid.min.js"></script>
 </head>
 <body>
     <nav>
@@ -16,12 +17,24 @@
         <a href="daily_journal.html">Daily Journal</a>
         <a href="todo_list.html">To-Do List</a>
         <a href="relationship_tree.html" class="active">Relationship Tree</a>
+        <a href="alternate_realities.html">Alternate Realities</a>
+        <a href="shooting_star.html">Shooting Star Wishes</a>
+        <a href="audio_diary.html">Audio Diary</a>
     </nav>
 
     <section id="relationship-tree">
-        <h1>Our Relationship Tree</h1>
-        <div id="tree-container"></div>
-        <button id="add-person">Add Person</button>
+        <h1>Your Relationship Tree 🌳</h1>
+        <div id="tree-container">
+            <div class="mermaid">
+                graph TD;
+                A[You] -->|Love| B(Partner);
+                A -->|Best Friend| C(Bestie);
+                A -->|Family| D(Family);
+                B -->|Romance| E(Anniversary);
+                C -->|Friendship Goals| F(Memories);
+                D -->|Support| G(Parents);
+            </div>
+        </div>
     </section>
 
     <script src="../js/relationship_tree.js"></script>
