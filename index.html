@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Cosmic Love Portal</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/dark_mode.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <!-- Dynamic Cosmic Background -->
+    <div id="cosmic-background"></div>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#nickname">Nicknames</a></li>
+            <li><a href="#love-letters">Love Letters</a></li>
+            <li><a href="#watch-party">Watch Party</a></li>
+            <li><a href="#journal">Journal</a></li>
+            <li><a href="#love-meter">Love Meter</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Celestial Authentication System -->
+    <section id="auth">
+        <h2>Enter the Cosmic Realm</h2>
+        <input type="password" id="auth-password" placeholder="Enter your secret passphrase">
+        <button onclick="authenticateUser()">Unlock</button>
+    </section>
+    
+    <!-- Love Dashboard -->
+    <section id="dashboard">
+        <h2>Welcome to Our Cosmic Love Portal</h2>
+        <div id="relationship-tree"></div>
+    </section>
+    
+    <!-- Nickname Generator -->
+    <section id="nickname">
+        <h2>Cosmic Nickname Generator</h2>
+        <button onclick="generateNickname()">Get a New Nickname</button>
+        <p id="nickname-result"></p>
+    </section>
+    
+    <!-- Secret Love Letters -->
+    <section id="love-letters">
+        <h2>Secret Love Letters</h2>
+        <button onclick="showLoveLetters()">Read Your Letters</button>
+        <div id="letter-container"></div>
+    </section>
+    
+    <!-- Shooting Star Wish Feature -->
+    <section id="shooting-star">
+        <h2>Make a Wish</h2>
+        <input type="text" id="wish-input" placeholder="Write your wish here">
+        <button onclick="saveWish()">Send to the Stars</button>
+    </section>
+    
+    <!-- Watch Party Feature -->
+    <section id="watch-party">
+        <h2>Watch Together</h2>
+        <video controls id="watch-video">
+            <source src="assets/videos/sample.mp4" type="video/mp4">
+        </video>
+        <div id="watch-chat"></div>
+    </section>
+    
+    <!-- Daily Journal & Audio Diary -->
+    <section id="journal">
+        <h2>Shared Journal</h2>
+        <textarea id="journal-entry" placeholder="Write your thoughts..."></textarea>
+        <button onclick="saveJournal()">Save Entry</button>
+    </section>
+    
+    <!-- Love Meter Quiz -->
+    <section id="love-meter">
+        <h2>Love Meter Quiz</h2>
+        <button onclick="startQuiz()">Start</button>
+        <div id="quiz-container"></div>
+    </section>
+    
+    <!-- 3D Avatar System -->
+    <section id="avatars">
+        <h2>Customize Your Avatar</h2>
+        <canvas id="avatarCanvas"></canvas>
+    </section>
+    
+    <!-- JavaScript Files -->
+    <script src="js/nickname.js"></script>
+    <script src="js/love_letter.js"></script>
+    <script src="js/watch_party.js"></script>
+    <script src="js/journal.js"></script>
+    <script src="js/love_meter.js"></script>
+    <script src="js/avatars.js"></script>
+</body>
+</html>
