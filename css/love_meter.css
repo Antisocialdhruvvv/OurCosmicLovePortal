@@ -1,0 +1,33 @@
+#love-meter {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 192, 203, 0.2);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+button {
+    margin-top: 20px;
+    background: #ff66b2;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+button:hover {
+    background: #ff3385;
+}
+
+#quiz-result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #ff3385;
+}
