@@ -1,33 +1,40 @@
 {
     "siteName": "Our Cosmic Love Portal",
-    "theme": "light",
+    "defaultTheme": "light",
     "enableDarkMode": true,
     "language": "en",
     "dateFormat": "DD-MM-YYYY",
     "timeFormat": "12h",
+    "enableISODate": true,
+    
     "defaultAvatar": "assets/images/avatars/default.png",
     "musicEnabled": true,
     "backgroundMusic": "assets/sounds/chime.mp3",
+    "musicVolume": 0.5,
+    "allowUserControl": true,
     "enableAnimations": true,
     "soundEffects": true,
-    
+
     "nicknameGenerator": {
         "enabled": true,
         "maxSuggestions": 5,
         "nicknameCount": 100,
-        "allowCustomNames": true
+        "allowCustomNames": true,
+        "categories": ["cute", "funny", "romantic", "mystical"]
     },
 
     "watchParty": {
         "enabled": true,
         "allowVideoUpload": false,
-        "maxParticipants": 5
+        "maxParticipants": 5,
+        "supportedPlatforms": ["YouTube", "Netflix", "CustomLinks"]
     },
 
     "loveMeterQuiz": {
         "enabled": true,
         "questionsCount": 10,
-        "resultVariations": ["soulmates", "best friends", "passionate", "needs work"]
+        "resultVariations": ["soulmates", "best friends", "passionate", "needs work"],
+        "customQuestions": []
     },
 
     "journal": {
@@ -44,6 +51,7 @@
     "shootingStarWishes": {
         "enabled": true,
         "maxWishes": 30,
-        "wishRevealTime": "midnight"
+        "wishRevealTime": "midnight",
+        "publicWishes": false
     }
 }
