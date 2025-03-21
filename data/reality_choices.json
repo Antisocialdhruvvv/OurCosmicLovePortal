@@ -1,0 +1,23 @@
+{
+    "start": {
+        "text": "You wake up in a world where love is determined by cosmic energies. What do you do?",
+        "choices": [
+            { "text": "Explore the cosmic world", "next": "explore" },
+            { "text": "Search for your soulmate", "next": "soulmate" }
+        ]
+    },
+    "explore": {
+        "text": "You venture into the cosmic realms and meet a mysterious figure...",
+        "choices": [
+            { "text": "Ask them about love", "next": "ask_about_love" },
+            { "text": "Ignore and continue exploring", "next": "continue_exploring" }
+        ]
+    },
+    "soulmate": {
+        "text": "You seek your soulmate and find a portal glowing with love energy.",
+        "choices": [
+            { "text": "Enter the portal", "next": "portal_entry" },
+            { "text": "Wait and observe", "next": "wait_and_observe" }
+        ]
+    }
+}
