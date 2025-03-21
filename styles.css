@@ -1,0 +1,111 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Cosmic Background */
+#cosmic-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/images/cosmic_bg.jpg') no-repeat center center/cover;
+    z-index: -1;
+    animation: cosmicFlow 30s infinite linear;
+}
+
+@keyframes cosmicFlow {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Sections */
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* Buttons */
+button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #ffaa00;
+}
+
+/* Authentication Section */
+#auth {
+    margin-top: 100px;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Love Meter Quiz */
+#love-meter {
+    background: rgba(255, 192, 203, 0.2);
+    padding: 50px;
+    border-radius: 10px;
+}
+
+/* Watch Party */
+#watch-party video {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* 3D Avatar */
+#avatarCanvas {
+    width: 300px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
