@@ -1,3 +1,4 @@
+/* Journal Container */
 #journal {
     text-align: center;
     padding: 20px;
@@ -5,50 +6,126 @@
     border-radius: 10px;
     max-width: 600px;
     margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Journal Entry Textarea */
 textarea {
     width: 100%;
     height: 150px;
     font-size: 1rem;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px;
+    border-radius: 8px;
     border: 1px solid #ccc;
     resize: none;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Focus Effect on Textarea */
+textarea:focus {
+    border-color: #6699ff;
+    box-shadow: 0px 0px 8px rgba(102, 153, 255, 0.5);
+    outline: none;
+}
+
+/* Submit Button */
 button {
     margin-top: 10px;
     background: #6699ff;
     border: none;
-    padding: 10px 15px;
+    padding: 12px 18px;
     font-size: 1rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     color: white;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Button Hover Effect */
 button:hover {
     background: #3366ff;
+    box-shadow: 0px 0px 10px rgba(51, 102, 255, 0.6);
 }
 
+/* Journal Entries List */
 ul {
     list-style: none;
     padding: 0;
+    margin-top: 20px;
 }
 
+/* Individual Journal Entry */
 li {
     background: rgba(255, 255, 255, 0.1);
     margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 8px;
     position: relative;
+    font-size: 1rem;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInEntry 0.5s ease-in-out forwards;
 }
 
+/* Fade-In Animation for New Entries */
+@keyframes fadeInEntry {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delete Button for Entries */
 li button {
     position: absolute;
     right: 10px;
     top: 10px;
-    background: red;
-    padding: 5px 10px;
+    background: #ff4d4d;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Delete Button Hover Effect */
+li button:hover {
+    background: #ff1a1a;
+    transform: scale(1.1);
+}
+
+/* Dark Mode Support */
+body.dark-mode #journal {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode textarea {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+body.dark-mode textarea:focus {
+    border-color: #ffcc00;
+    box-shadow: 0px 0px 8px rgba(255, 204, 0, 0.5);
+}
+
+body.dark-mode li {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode li button {
+    background: #ff6666;
+}
+
+body.dark-mode li button:hover {
+    background: #ff3333;
 }
