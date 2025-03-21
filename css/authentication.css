@@ -22,6 +22,34 @@
     border: none;
     cursor: pointer;
 }
+.auth-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.auth-container input {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.auth-container button {
+    background: #ffcc00;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.auth-container button:hover {
+    background: #ffaa00;
+}
+
 
 #authMessage {
     margin-top: 10px;
