@@ -1,0 +1,35 @@
+#audio-diary {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+button:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+button:hover {
+    background: #ffaa00;
+}
+
+audio {
+    margin-top: 10px;
+}
+
+#saved-recordings {
+    margin-top: 20px;
+}
