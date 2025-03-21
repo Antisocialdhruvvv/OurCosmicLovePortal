@@ -25,3 +25,14 @@ canvas {
     font-size: 1rem;
     border-radius: 5px;
 }
+#avatarCanvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    margin: 20px auto;
+}
