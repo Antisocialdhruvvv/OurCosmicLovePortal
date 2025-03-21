@@ -8,3 +8,20 @@ canvas {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
+#avatarCanvas {
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px solid white;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+#avatarSelector {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
