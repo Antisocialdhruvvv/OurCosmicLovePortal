@@ -65,3 +65,57 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const loginForm = document.getElementById("loginForm");
+    const registerForm = document.getElementById("registerForm");
+    const userDisplay = document.getElementById("userDisplay");
+
+    function saveUser(username, password) {
+        localStorage.setItem("user", JSON.stringify({ username, password }));
+    }
+
+    function getUser() {
+        return JSON.parse(localStorage.getItem("user"));
+    }
+
+    function authenticate(username, password) {
+        const storedUser = getUser();
+        return storedUser && storedUser.username === username && storedUser.password === password;
+    }
+
+    loginForm?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const username = document.getElementById("loginUsername").value;
+        const password = document.getElementById("loginPassword").value;
+
+        if (authenticate(username, password)) {
+            sessionStorage.setItem("loggedInUser", username);
+            window.location.href = "index.html";
+        } else {
+            alert("Invalid credentials. Try again!");
+        }
+    });
+
+    registerForm?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const username = document.getElementById("registerUsername").value;
+        const password = document.getElementById("registerPassword").value;
+        saveUser(username, password);
+        alert("Registration successful! You can now log in.");
+        window.location.href = "login.html";
+    });
+
+    function checkLogin() {
+        const loggedInUser = sessionStorage.getItem("loggedInUser");
+        if (loggedInUser) {
+            userDisplay.innerHTML = `Welcome, ${loggedInUser}! <button onclick="logout()">Logout</button>`;
+        }
+    }
+
+    window.logout = function () {
+        sessionStorage.removeItem("loggedInUser");
+        window.location.href = "login.html";
+    };
+
+    checkLogin();
+});
