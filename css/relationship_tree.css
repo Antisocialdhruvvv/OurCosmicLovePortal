@@ -1,0 +1,30 @@
+#relationship-tree {
+    text-align: center;
+    padding: 20px;
+    background: rgba(173, 216, 230, 0.2);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.person {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+button {
+    background: #66ccff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    margin: 5px;
+}
+
+button:hover {
+    background: #3399ff;
+}
