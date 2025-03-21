@@ -31,6 +31,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 score += 25;
             }
         }
+        document.addEventListener("DOMContentLoaded", function () {
+    const quizForm = document.getElementById("love-meter-quiz");
+    const resultContainer = document.getElementById("love-result");
+    const loveScoreDisplay = document.getElementById("love-score");
+
+    quizForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        
+        let score = 0;
+        const formData = new FormData(quizForm);
+        formData.forEach((value) => {
+            score += parseInt(value);
+        });
+
+        const loveScore = Math.min(100, Math.max(30, score));  
+        loveScoreDisplay.textContent = `${loveScore}%`;
+        resultContainer.style.display = "block";
+    });
+});
+
         
         quizResult.innerText = `Your Love Compatibility Score: ${score}% 💖`;
     });
