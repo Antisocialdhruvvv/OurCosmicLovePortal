@@ -55,3 +55,34 @@
     margin-top: 10px;
     font-size: 1.2rem;
 }
+.auth-container {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 10px;
+    background: #ffcc00;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.auth-container button:hover {
+    background: #ffaa00;
+}
+
