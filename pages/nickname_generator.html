@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nickname Generator | Our Cosmic Love Portal</title>
+    <title>Nickname Generator</title>
     <link rel="stylesheet" href="../css/nickname.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Cosmic Nickname Generator 🌟</h1>
-        <p>Click the button to generate a special cosmic nickname for Samridhi!</p>
-        <button onclick="generateNickname()">Generate Nickname</button>
-        <h2 id="nickname-display">✨ Your nickname will appear here ✨</h2>
+
+    <div id="nickname-container">
+        <h1>💕 Your Special Nickname 💕</h1>
+        <input type="text" id="search-box" placeholder="Search nicknames...">
+        <button id="generate-btn">Generate Nickname</button>
+
+        <div id="nickname-box">
+            <h2 id="nickname">Click the button to get a nickname!</h2>
+            <p id="meaning"></p>
+        </div>
+
+        <ul id="nickname-list"></ul>
     </div>
-    
+
     <script src="../js/nickname.js"></script>
 </body>
 </html>
