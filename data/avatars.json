@@ -1,0 +1,7 @@
+{
+    "avatars": [
+        { "name": "Galaxy Hero", "file": "galaxy_hero" },
+        { "name": "Nebula Queen", "file": "nebula_queen" },
+        { "name": "Starlight Explorer", "file": "starlight_explorer" }
+    ]
+}
