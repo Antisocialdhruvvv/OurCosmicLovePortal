@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Our Cosmic Love Portal</title>
+    <title>Login / Register | Our Cosmic Love Portal</title>
     <link rel="stylesheet" href="../css/authentication.css">
 </head>
 <body>
@@ -15,15 +15,23 @@
         <a href="authentication.html" class="active">Login</a>
     </nav>
 
-    <section id="auth">
-        <h2>Login / Sign Up</h2>
-        <form id="authForm">
-            <input type="text" id="username" placeholder="Enter Username" required>
-            <input type="password" id="password" placeholder="Enter Password" required>
-            <button type="submit">Submit</button>
+    <div class="auth-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Enter Username" required>
+            <input type="password" id="loginPassword" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
         </form>
+
+        <h2>Register</h2>
+        <form id="registerForm">
+            <input type="text" id="registerUsername" placeholder="Choose Username" required>
+            <input type="password" id="registerPassword" placeholder="Choose Password" required>
+            <button type="submit">Register</button>
+        </form>
+
         <p id="authMessage"></p>
-    </section>
+    </div>
 
     <script src="../js/authentication.js"></script>
 </body>
