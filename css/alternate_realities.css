@@ -1,0 +1,28 @@
+#reality-container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(173, 216, 230, 0.2);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+#story-container {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #ff66cc;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    margin: 5px;
+}
+
+button:hover {
+    background: #ff3399;
+}
