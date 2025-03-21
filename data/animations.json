@@ -1,0 +1,6 @@
+{
+    "effects": [
+        { "name": "cosmic_twinkle", "type": "stars", "intensity": "high" },
+        { "name": "glowing_button", "type": "hover", "color": "gold" }
+    ]
+}
