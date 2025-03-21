@@ -31,3 +31,17 @@ button:hover {
     font-size: 1.5rem;
     color: #ff3385;
 }
+#love-meter {
+    background: rgba(255, 192, 203, 0.2);
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#love-result {
+    display: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff007f;
+    margin-top: 20px;
+}
