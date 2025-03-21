@@ -1,0 +1,54 @@
+#journal {
+    text-align: center;
+    padding: 20px;
+    background: rgba(173, 216, 230, 0.2);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+button {
+    margin-top: 10px;
+    background: #6699ff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+button:hover {
+    background: #3366ff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+li button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: red;
+    padding: 5px 10px;
+}
