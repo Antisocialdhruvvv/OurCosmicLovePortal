@@ -1,38 +1,82 @@
+/* Avatar Customization Section */
 #avatar-customization {
     text-align: center;
     padding: 20px;
 }
 
-canvas {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-}
+/* Avatar Canvas */
 #avatarCanvas {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     background: rgba(0, 0, 0, 0.7);
-    border: 3px solid white;
+    border: 4px solid white;
     border-radius: 50%;
     display: block;
-    margin: auto;
+    margin: 20px auto;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Hover effect for interactive feel */
+#avatarCanvas:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Avatar Selector Dropdown */
 #avatarSelector {
     display: block;
-    margin: 10px auto;
-    padding: 8px;
-    font-size: 1rem;
-    border-radius: 5px;
+    margin: 15px auto;
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-#avatarCanvas {
+
+/* Avatar Selector Hover Effect */
+#avatarSelector:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Canvas Container */
+.canvas-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 400px;
+    width: 320px;
+    height: 420px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
     margin: 20px auto;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Canvas Container Hover Effect */
+.canvas-container:hover {
+    transform: scale(1.02);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+    #avatarCanvas {
+        width: 180px;
+        height: 180px;
+    }
+
+    .canvas-container {
+        width: 90%;
+        height: auto;
+    }
+
+    #avatarSelector {
+        font-size: 1rem;
+        padding: 8px;
+    }
 }
