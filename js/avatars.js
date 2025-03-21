@@ -61,3 +61,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, 300 / 400, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
+    renderer.setSize(300, 400);
+    document.getElementById("avatarCanvas").appendChild(renderer.domElement);
+
+    const geometry = new THREE.SphereGeometry(1, 32, 32);
+    const material = new THREE.MeshStandardMaterial({ color: 0xffcc00 });
+    const avatarHead = new THREE.Mesh(geometry, material);
+    scene.add(avatarHead);
+
+    const light = new THREE.PointLight(0xffffff, 1, 100);
+    light.position.set(2, 2, 2);
+    scene.add(light);
+
+    camera.position.z = 3;
+
+    function animate() {
+        requestAnimationFrame(animate);
+        avatarHead.rotation.y += 0.01;
+        renderer.render(scene, camera);
+    }
+    animate();
+});
