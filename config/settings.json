@@ -1,0 +1,33 @@
+{
+    "siteName": "Our Cosmic Love Portal",
+    "theme": "light",  
+    "enableDarkMode": true,
+    "language": "en",
+    "dateFormat": "DD-MM-YYYY",
+    "timeFormat": "12h",
+    "defaultAvatar": "assets/images/avatars/default.png",
+    "musicEnabled": true,
+    "backgroundMusic": "assets/sounds/chime.mp3",
+    "enableAnimations": true,
+    "maxLoveLetters": 50,
+    "nicknameGenerator": {
+        "enabled": true,
+        "nicknameCount": 100
+    },
+    "watchParty": {
+        "enabled": true,
+        "maxParticipants": 5
+    },
+    "loveMeterQuiz": {
+        "enabled": true,
+        "questionsCount": 10
+    },
+    "todoList": {
+        "enabled": true,
+        "maxTasks": 20
+    },
+    "shootingStarWishes": {
+        "enabled": true,
+        "maxWishes": 30
+    }
+}
