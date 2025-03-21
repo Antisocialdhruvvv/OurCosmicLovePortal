@@ -4,68 +4,112 @@ body {
     color: #fff;
     text-align: center;
     padding: 20px;
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 #search-box {
-    padding: 10px;
-    width: 60%;
+    padding: 12px;
+    width: 80%;
+    max-width: 500px;
     font-size: 1rem;
     margin-bottom: 20px;
+    border-radius: 8px;
+    border: 2px solid #ff6b6b;
+    background: #222;
+    color: white;
+    transition: border 0.3s ease-in-out;
+}
+
+#search-box:focus {
+    border: 2px solid #ff3b3b;
+    outline: none;
 }
 
 #generate-btn {
-    padding: 12px 20px;
+    padding: 14px 25px;
     font-size: 1.2rem;
-    background-color: #ff6b6b;
+    background: linear-gradient(45deg, #ff6b6b, #ff3b3b);
     color: white;
     border: none;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
-    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(255, 107, 107, 0.5);
 }
 
 #generate-btn:hover {
-    background-color: #ff3b3b;
+    background: linear-gradient(45deg, #ff3b3b, #ff1f1f);
+    transform: scale(1.05);
 }
 
 #nickname-box {
     background-color: #222;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     margin: 20px auto;
-    width: 60%;
+    width: 80%;
+    max-width: 500px;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
 }
 
 #nickname {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
     color: #ff6b6b;
-    transition: opacity 0.4s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
 }
 
 #meaning {
     font-size: 1.2rem;
     color: #ffffff;
-    transition: opacity 0.4s ease-in-out;
+    opacity: 0.8;
+    animation: fadeIn 1.2s ease-in-out;
 }
 
 #nickname-list {
     list-style: none;
     padding: 0;
-    text-align: left;
-    width: 60%;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
     margin: 20px auto;
 }
 
 #nickname-list li {
     background: #333;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#nickname-list li:hover {
+    background: #ff6b6b;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    #search-box, #nickname-box, #nickname-list {
+        width: 90%;
+    }
+    #generate-btn {
+        width: 90%;
+    }
 }
