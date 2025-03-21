@@ -1,3 +1,4 @@
+/* Audio Diary Container */
 #audio-diary {
     text-align: center;
     padding: 20px;
@@ -5,31 +6,73 @@
     border-radius: 10px;
     max-width: 600px;
     margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Button Styles */
 button {
     background: #ffcc00;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 1rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
-button:disabled {
-    background: gray;
-    cursor: not-allowed;
-}
-
+/* Button Hover Effect */
 button:hover {
     background: #ffaa00;
+    box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.7);
 }
 
+/* Disabled Button */
+button:disabled {
+    background: rgba(128, 128, 128, 0.6);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Audio Player Styling */
 audio {
     margin-top: 10px;
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
+/* Saved Recordings Section */
 #saved-recordings {
     margin-top: 20px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Make recordings appear smoothly */
+#saved-recordings.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    #audio-diary {
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
 }
