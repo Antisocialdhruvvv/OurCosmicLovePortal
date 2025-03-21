@@ -31,3 +31,29 @@
         "maxWishes": 30
     }
 }
+{
+  "theme": "dark",
+  "animations": true,
+  "soundEffects": true,
+  "nicknameGenerator": {
+    "maxSuggestions": 5,
+    "allowCustomNames": true
+  },
+  "watchParty": {
+    "allowVideoUpload": false,
+    "maxUsers": 5
+  },
+  "loveMeter": {
+    "questionCount": 10,
+    "resultVariations": ["soulmates", "best friends", "passionate", "needs work"]
+  },
+  "journal": {
+    "maxEntriesPerDay": 5,
+    "shareOption": true
+  },
+  "shootingStar": {
+    "maxWishes": 3,
+    "wishRevealTime": "midnight"
+  }
+}
+
