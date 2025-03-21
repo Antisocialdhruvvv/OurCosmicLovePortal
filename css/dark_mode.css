@@ -1,0 +1,23 @@
+/* Dark Mode Styles */
+body.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+/* Dark Mode Navigation */
+body.dark-mode nav {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode nav ul li a {
+    color: #ffcc00;
+}
+
+body.dark-mode #dark-mode-toggle {
+    background: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode #dark-mode-toggle:hover {
+    background: #cccccc;
+}
